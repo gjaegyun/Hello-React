@@ -12,12 +12,12 @@ import diceRed05 from './assets/dice-red-5.svg';
 import diceRed06 from './assets/dice-red-6.svg';
 
 const DICE_IMAGES = {
-    blue: [diceBlue01, diceBlue02, diceBlue03, diceBlue04, diceBlue05, diceBlue06],
+    blue: [diceBlue01, diceBlue02, diceBlue03, diceBlue04, diceBlue05, diceBlue06], //blue와 red를 배열로 선언해줘서 꺼내쓸수 숫자로 꺼내쓸수 있게끔 한다.
     red: [diceRed01, diceRed02, diceRed03, diceRed04, diceRed05, diceRed06],
 };
 
-function Dice( {color = 'blue', num = 1}) {
-    const src = DICE_IMAGES[color][num - 1];
+function Dice( {color = 'blue', num = 1}) { //color를 blue로 치환, num을 1로 치환시킨다.
+    const src = DICE_IMAGES[color][num - 1]; 
     const alt = `${color} ${num}`;
     return <img src={src} alt={alt} />;
 }
